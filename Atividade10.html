@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    function SomaTri(lados, medidas) {
+    let valor = lados + medidas.reduce((acc, curr) => acc + curr, 0);
+    alert(valor);
+}
+
+function SomaQua(lados, medida) {
+    let valor = lados * medida;
+    alert(valor);
+}
+
+function SomaPen(lados, medidas) {
+    let valor = lados + medidas.reduce((acc, curr) => acc + curr, 0);
+    alert(valor);
+}
+
+let lados = parseFloat(prompt("Quantos lados tem?"));
+if (lados < 3) {
+    alert("Não é um polígono");
+} else if (lados === 3) {
+    alert("É um triângulo");
+    let medidas = [];
+    for (let i = 1; i <= lados; i++) {
+        medidas.push(parseFloat(prompt(`Quantos CM/altura o lado ${i} tem?`)));
+    }
+    SomaTri(lados, medidas);
+} else if (lados === 4) {
+    alert("É um quadrado");
+    let medida = parseFloat(prompt("Quantos CM/altura os lados têm?"));
+    SomaQua(lados, medida);
+} else if (lados === 5) {
+    alert("É um pentágono");
+    let medidas = [];
+    for (let i = 1; i <= lados; i++) {
+        medidas.push(parseFloat(prompt(`Quantos CM/altura o lado ${i} tem?`)));
+    }
+    SomaPen(lados, medidas);
+} else {
+    alert("Polígono não identificado");
+}
+    </script>
+</body>
+</html>

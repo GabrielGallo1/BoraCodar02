@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+         let macas = parseFloat(prompt("Quantas maçãs você vai comprar?"));
+
+        let preco;
+        if (macas > 12) {
+            preco = 3.50;
+        } else {
+            preco = 2.50;
+        }
+
+        let calculo = macas * preco;
+
+        if (macas > 12) {
+            let confirmacao = confirm(`O valor das ${macas} maçãs é de ${calculo}. Confirmar a compra?`);
+            if (confirmacao) {
+                alert("Compra confirmada!");
+            } else {
+                alert("Compra cancelada.");
+            }
+        } else {
+            let confirmacao = confirm(`O valor das ${macas} maçãs é de ${calculo}. Confirmar a compra?`);
+            if (confirmacao) {
+                alert("Compra confirmada!");
+            } else {
+                alert("Compra cancelada.");
+            }
+        }
+
+    </script>
+</body>
+</html>
